@@ -1,0 +1,18 @@
+{
+	"A" :{
+		"chart1":{"num":0,"target":1000},
+		"chart2":{"num":0,"target":60}
+	},
+	"B":{
+		"chart1":{"num":0,"target":567},
+		"chart2":{"num":0,"target":40}
+	},
+	"C":{
+		"chart1":{"num":0,"target":400},
+		"chart2":{"num":0,"target":20}
+	},
+	"D":{
+		"chart1":{"num":0,"target":30},
+		"chart2":{"num":0,"target":90}
+	}
+}

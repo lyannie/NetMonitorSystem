@@ -1,0 +1,55 @@
+/*main{
+	width: 90%;
+	margin: 0 auto;
+}
+*/
+#leftCanvas{
+	width: 800px;
+	height: 600px;
+	margin: 0px 20px;
+}
+.show-detail {
+	width: 400px;
+	height: 600px;
+	position: relative;
+	visibility: hidden;
+}
+#Mycanvas1 {
+	bottom: 0px;
+	left: 0px;
+	z-index: 1;
+}
+#Mycanvas2 {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border-left: 2px solid #EE6E73;
+}
+#Mycanvas3 {
+	position: absolute;
+	top: 300px;
+	right: 0px;
+	border-left: 2px solid #EE6E73;
+}
+#Mycanvas2::before{
+	display: block;
+	content:"<<";
+	background-color: #EE6E73;
+	width: 20px;
+	height: 50px;
+}
+
+.show-data {
+	margin-bottom: 100px;
+}
+
+/*css for monitor*/
+.list {
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+/*css for about*/
+.about {
+	height: 574px;
+}
