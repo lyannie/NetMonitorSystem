@@ -43,7 +43,7 @@ Calendar.prototype.showMonth = function(year, mon){
 
 	//write selected month and year
 	html += "<thead><tr>";
-	html += "<td col7>" + this.Month[mon] + " " + year + "</td>";
+	html += "<td>" + this.Month[mon] + " " + year +"</td>";
 	html += "</tr></thead>";
 
 	//write the header of calendar
@@ -73,9 +73,9 @@ Calendar.prototype.showMonth = function(year, mon){
 		var check = new Date();
 		if(check.getFullYear() == this.currYear && check.getMonth() == this.currMon && 
 		   c == this.currDate){
-			html += "<td class='today'>" + c + "</td>";
+			html += "<td class='today'><a id=" + this.currYear + (this.currMon+1) + c + " href='##'>" + c + "</a></td>";
 		}else{
-			html += "<td class='normal'>" + c + "</td>";
+			html += "<td class='normal'><a id=" + this.currYear + (this.currMon+1) + c + " href='##" + c  + "'>" + c + "</a></td>";
 		}
 		if ( dayOfWeek == 6) {
 			html += "</tr>";
@@ -98,16 +98,25 @@ Calendar.prototype.showMonth = function(year, mon){
 };
 // On Load of the window
 function startCalendar() {
-
 	// Start calendar
 	var cal = new Calendar("divCal");			
 	cal.showCalendar();
 
 	// Bind next and previous button clicks
+	
 	document.getElementById('btnNext').onclick = function() {
 		cal.nextMonth();
 	};
 	document.getElementById('btnPrev').onclick = function() {
 		cal.prevMonth();
 	};
+	
 }
+//use .on() to make sure that js execute after the Dom has romanced which is dynamicly created.
+//without unbind(), this.id will return mutiple times
+$(document).on("click", ".normal", function() {
+	$("a").unbind().click(function() {
+		console.log(this.id); 		
+	});
+});
+

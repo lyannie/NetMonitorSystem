@@ -8,10 +8,11 @@
 
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script type="text/javascript" src = "../js/calendar.js"></script>
 	<script type="text/javascript" src="../websocket.js"></script>
-	<script type="text/javascript" src ="../js/calendar.js"></script>
+	
 </head>
-<body onload="startCalendar()">
+<body onload="startCalendar();webSocket()">
 	<div class="wrapper">
 		<div class="container">
 			<div class="row">
@@ -33,10 +34,8 @@
 					                             <button id="btnNext" class="btn-cal">Next</button>
 					                             <div id="divCal"></div>
 					              </div>
-						<div class="right">
-							 <div class="chartContainer" id="container1">
-								<canvas id="theChart" width="50" height="30" style="width:10px; height:10px"></canvas>
-							</div>
+						<div class="chartContainer right historyChart" id="container1">
+							<canvas id="theChart" height="200px;"></canvas>
 						</div>
 					</div>
 				</main>
@@ -46,6 +45,6 @@
 	</div>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
-	    <script type="text/javascript" src = "../js/calendar.js"></script>
+	
 </body>
 </html>	

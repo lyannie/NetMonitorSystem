@@ -45,14 +45,14 @@
 
 /*css for monitor*/
 .list {
-	margin-top: 50px;
-	margin-left: 50px;
+	margin-top: 20px;
+	margin-left: 20px;
 }
 .list-group {
 	width: 200px;
 }
 .chartContainer {
-	width: 1000px;
+	width: 900px;
 	height: 800px;
 	margin-left: 50px;
 }
@@ -63,6 +63,11 @@
 }
 
 /*css for history*/
+.historyChart {
+	margin-top : 20px;
+	margin-right: 50px;
+
+}
 .btn-cal {
 	text-align: center;
 	padding: 10px 20px;
@@ -100,8 +105,8 @@
 }
 .calendar-container {	
 	width: 300px;
-	margin-top: 50px;
-	margin-left: 50px;
+	margin-top: 20px;
+	margin-left: 20px;
 	border-radius: 5px;
 	border: 2px solid #eee;
 }
@@ -126,7 +131,7 @@ tbody {
 td {
 	width:100% / 7;
 	/*width: 50px;*/
-	height:48px;
+	height:40px;
 	text-align:center;
 	vertical-align:middle;
 	border-right:1px solid #eee;
