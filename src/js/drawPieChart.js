@@ -35,7 +35,7 @@ function drawFace(ctx, num, type){
 	ctx.font = "24px Microsoft Yahei";
 	if(type == "chart1"){
 		ctx.fillText(num + "KB/s", 0, 0);	//设置圆中单位
-		var rate = ((2000 - num) / 1000 - 0.5) * Math.PI;  //设置灰色弧形初始角度
+		var rate = (num / 400 * 2 - 0.5) * Math.PI;  //设置灰色弧形初始角度
 	}
 	else {
 		ctx.fillText(num + "%", 0, 0);
@@ -62,7 +62,7 @@ function drawGradientCircle(ctx,xc, yc, r, sa, ea, colors){
 		endColor = colors[i + 1];
 		if((i + 1) == colors.length) break;
 		//if you want the end of the part has gradient to StartColor,change it to
-		//endColor  colors[(i + 1) % colors.length];
+		//endColor = colors[(i + 1) % colors.length];
 
 		var xStart = xc + Math.cos(angle) * r;
 		var xEnd = xc + Math.cos(angle + partAngle) * r;
