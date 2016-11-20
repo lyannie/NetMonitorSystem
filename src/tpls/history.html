@@ -6,13 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="../css/leaves.css">
 	<link rel="stylesheet" type="text/css" href="../css/scan.css">
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 	<script type="text/javascript" src = "../js/calendar.js"></script>
-	<script type="text/javascript" src="../websocket.js"></script>
+	<script type="text/javascript" src="../ajax.js"></script>
+	<script type="text/javascript" src="../js/history.js"></script>
 	
 </head>
-<body onload="startCalendar();webSocket()">
+<body onload="startCalendar()">
 	<div class="wrapper">
 		<div class="container">
 			<div class="row">
@@ -35,7 +37,8 @@
 					                             <div id="divCal"></div>
 					              </div>
 						<div class="chartContainer right historyChart" id="container1">
-							<canvas id="theChart" height="200px;"></canvas>
+							<canvas id="historySpeedChart" height="200px;"></canvas>
+							<canvas id="historyBagChart" height="200px;"></canvas>
 						</div>
 					</div>
 				</main>
@@ -43,8 +46,6 @@
 			</div>
 		</div>		
 	</div>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
-	
+
 </body>
 </html>	

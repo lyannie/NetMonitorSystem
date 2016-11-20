@@ -10,8 +10,6 @@ function getDataFromBackend (url){
 			if(request.readyState == 4 && request.status == 200){
 				let data = JSON.parse(request.responseText);
 				resolve(data);
-
-
 			} else
 				reject(new Error("false" + request.status));
 
