@@ -20,12 +20,13 @@ httpServer.listen(8088);
 ioServer.on('connection', function (socket) {
 	socket.join('timer');
 	setInterval(function() { 
-		var dataAB = Math.round(Math.random() *  100) ; 		//0 - 100
-		var dataAC = Math.round(Math.random() *  50) + 80;		//80 -130
-		var dataAD = Math.round(Math.random() *  30) + 300;		//320-350
-   		ioServer.in('timer').emit("speed", [dataAB, dataAC, dataAD]);
+		var dataSpeedAB = Math.round(Math.random() *  100) ; 		//0 - 100
+		var dataSpeedAC = Math.round(Math.random() *  50) + 80;		//80 -130
+		var dataSpeedAD = Math.round(Math.random() *  30) + 300;		//320-350
+		var dataBagAB = Math.round(Math.random() * 10) + 20;			//20 - 30
+		var dataBagAC = Math.round(Math.random() * 5) + 10;			//10 - 15 
+		var dataBagAD = Math.round(Math.random() * 30) + 40;			//40 - 70
+   		ioServer.in('timer').emit("monitorData", [dataSpeedAB, dataSpeedAC, dataSpeedAD, 
+   						    dataBagAB, dataBagAC, dataBagAD]);
 	}, 3000);
-	socket.on('date',function(date){
-		console.log(date);
-	});
 });
